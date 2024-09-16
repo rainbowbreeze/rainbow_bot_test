@@ -63,15 +63,15 @@ async def on_message(update: Update, context):
 
 
 async def on_delays_pavia(update: Update, context):
-    await send_delays_for_station("S01860")
+    await send_delays_for_station("S01860", update, context)
 
 
 async def on_delays_milano_garibaldi_sott(update: Update, context):
-    await send_delays_for_station("S01647")
+    await send_delays_for_station("S01647", update, context)
 
 
 async def on_delays_milano_rogoredo(update: Update, context):
-    await send_delays_for_station("S01820")
+    await send_delays_for_station("S01820", update, context)
 
 
 
