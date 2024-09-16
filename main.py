@@ -63,21 +63,21 @@ async def on_message(update: Update, context):
 
 
 async def on_delays_pavia(update: Update, context):
-    await send_delays_for_station("S01860", update, context)
+    send_delays_for_station("S01860", update, context)
 
 
 async def on_delays_milano_garibaldi_sott(update: Update, context):
-    await send_delays_for_station("S01647", update, context)
+    send_delays_for_station("S01647", update, context)
 
 
 async def on_delays_milano_rogoredo(update: Update, context):
-    await send_delays_for_station("S01820", update, context)
+    send_delays_for_station("S01820", update, context)
 
 
 
-def send_delays_for_station(station_code: str, update: Update, context) -> None:
+async def send_delays_for_station(station_code: str, update: Update, context) -> None:
     message = get_data_for_a_station(station_code)
-    context.bot.send_message(
+    await context.bot.send_message(
         chat_id=update.effective_chat.id,
         text=message
     )
