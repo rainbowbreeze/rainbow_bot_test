@@ -51,7 +51,7 @@ async def main(request):
 async def on_start(update: Update, context):
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text="Hello, I'm your first bot!"
+        text="Hello from Yellow Bot"
     )
 
 
