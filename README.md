@@ -11,6 +11,18 @@ Reference videos
 ## Google Cloud Functions management
 
 Set environmental variables
+https://cloud.google.com/functions/docs/configuring/env-var
+
+
+Select the region
+https://cloud.google.com/about/locations#europe
+europe-west8 -> Milan -> It doesn't work
+
+
+
+
+## Telegram notes
+https://gitlab.com/Athamaxy/telegram-bot-tutorial/-/blob/main/TutorialBot.py
 
 
 
