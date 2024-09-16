@@ -48,29 +48,29 @@ async def main(request):
     return "ok"
 
 
-async def on_start(update: Update, context):
+async def on_start(update: Update, context) -> None:
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
         text="Hello from Yellow Bot"
     )
 
 
-async def on_message(update: Update, context):
+async def on_message(update: Update, context) -> None:
     await context.bot.send_message(
         chat_id=update.effective_chat.id,
         text=update.message.text
     )
 
 
-async def on_delays_pavia(update: Update, context):
+def on_delays_pavia(update: Update, context) -> None:
     send_delays_for_station("S01860", update, context)
 
 
-async def on_delays_milano_garibaldi_sott(update: Update, context):
+def on_delays_milano_garibaldi_sott(update: Update, context) -> None:
     send_delays_for_station("S01647", update, context)
 
 
-async def on_delays_milano_rogoredo(update: Update, context):
+def on_delays_milano_rogoredo(update: Update, context) -> None:
     send_delays_for_station("S01820", update, context)
 
 
