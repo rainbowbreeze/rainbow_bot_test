@@ -153,10 +153,8 @@ def get_data_for_a_station(station_code: str) -> str:
     time_for_url: str = time_to_string_literal(
         datetime.datetime.now(), timezone_name
     ).replace(" ", "%20")
-    # api_url: str = "http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/partenze/S01860/Sun%20Sep%2015%202024%2018:42:33%20GMT+0200%20(Central%20European%20Summer%20Time)"
     api_url: str = f"http://www.viaggiatreno.it/infomobilita/resteasy/viaggiatreno/partenze/{station_code}/{time_for_url}"
-    print(api_url)
-
+    #print(api_url)
 
     json_data = call_rest_api(api_url)
     train_list: str = ""
