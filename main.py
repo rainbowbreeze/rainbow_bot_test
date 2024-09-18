@@ -203,4 +203,3 @@ def get_data_for_a_station(station_code: str) -> str:
             print("The returned data is not an array.")
 
     return train_list
-
